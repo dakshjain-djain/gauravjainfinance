@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaurav Jain & Associates - Financial Consultancy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Georgia&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      color: #ffffff;
+      background-color: #0a1a3b; /* True dark blue */
+      line-height: 1.7;
+      font-size: 16px; /* Smaller base text for mobile */
+    }
+    @media (min-width: 768px) {
+      body {
+        font-size: 18px; /* Original base text for larger screens */
+      }
+    }
+    .section-bg {
+      background-color: #1c2a5c; /* Slightly lighter dark blue for sections */
+    }
+    .accent-bg {
+      background-color: #3b82f6; /* Blue accent for buttons */
+    }
+    .hover-effect {
+      transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .hover-effect:hover {
+      transform: translateY(-5px);
+      background-color: #4b9eff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    .section {
+      padding: 4rem 1rem; /* Reduced for mobile */
+      margin-bottom: 2rem; /* Slightly reduced */
+      border-radius: 0.5rem;
+    }
+    @media (min-width: 768px) {
+      .section {
+        padding: 6rem 1rem; /* Original padding for larger screens */
+        margin-bottom: 2.5rem;
+      }
+    }
+    .section-title {
+      font-size: 2.25rem; /* Slightly smaller for mobile */
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 2rem;
+      position: relative;
+    }
+    @media (min-width: 768px) {
+      .section-title {
+        font-size: 2.75rem; /* Original size for larger screens */
+      }
+    }
+    .section-title::after {
+      content: '';
+      width: 80px; /* Slightly smaller for mobile */
+      height: 4px;
+      background-color: #3b82f6;
+      position: absolute;
+      bottom: -0.75rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @media (min-width: 768px) {
+      .section-title::after {
+        width: 100px; /* Original size */
+      }
+    }
+    .header-title {
+      font-size: 1.875rem; /* Smaller for compact header */
+      font-weight: 800; /* Extra bold */
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      background: linear-gradient(to right, #ffffff, #3b82f6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .header-subtitle {
+      font-size: 1rem; /* Smaller for compact header */
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      background: linear-gradient(to right, #ffffff, #3b82f6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    @media (min-width: 768px) {
+      .header-title {
+        font-size: 2rem; /* Slightly larger for desktop */
+      }
+      .header-subtitle {
+        font-size: 1.25rem; /* Slightly larger for desktop */
+      }
+    }
+    .copyright-text {
+      font-size: 1rem; /* Even smaller for mobile */
+      font-weight: 800; /* Extra bold */
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      background: linear-gradient(to right, #ffffff, #3b82f6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    @media (min-width: 768px) {
+      .copyright-text {
+        font-size: 1.25rem; /* Original smaller size */
+      }
+    }
+    .social-icon {
+      transition: transform 0.3s ease;
+    }
+    .social-icon:hover {
+      transform: scale(1.2);
+    }
+    .faq-item {
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .faq-item:hover {
+      background-color: #2a3a7c;
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+    .faq-answer.open {
+      max-height: 500px; /* Adjust based on content */
+      padding: 1rem 0;
+    }
+    a.no-underline:hover {
+      text-decoration: none;
+    }
+    .copyright-section {
+      padding: 1.5rem 1rem; /* Reduced for mobile */
+      text-align: center;
+    }
+    @media (min-width: 768px) {
+      .copyright-section {
+        padding: 2rem 1rem; /* Original padding */
+      }
+    }
+    .consultation-button {
+      min-height: 44px; /* Ensure tappable size for mobile */
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+  <!-- Header -->
+  <header class="bg-[#0a1a3b] py-8 shadow-lg fixed w-full z-10">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="header-title">Gaurav Jain & Associates</h1>
+      <p class="header-subtitle mt-1">Financial Consultants</p>
+    </div>
+  </header>
+
+  <!-- About Us Section -->
+  <section id="about-us" class="section section-bg text-center pt-40">
+    <div class="container mx-auto px-4">
+      <h2 class="section-title">About Us</h2>
+      <div class="text-base md:text-lg max-w-4xl mx-auto mb-6">
+        <p class="mb-4">Founded in April 2000, Gaurav Jain & Associates has earned a reputation as a premier financial consultancy, delivering tailored solutions that empower businesses to navigate complex financial landscapes. With over 25+ years of expertise, we have built a legacy based on integrity, precision, and excellence, ensuring that enterprises receive top-tier financial advisory services that align with stringent regulatory standards while fostering sustainable growth.</p>
+        <p>Our consultancy operates with a client-centric philosophy, recognizing that every business has unique financial challenges and aspirations. By offering strategic financial structuring, tax optimization, corporate governance expertise, and regulatory compliance solutions, we provide comprehensive support that helps businesses make informed decisions with confidence.</p>
+      </div>
+      <a href="https://calendly.com/gauravjainfinance" target="_blank" class="inline-block accent-bg text-white py-3 px-6 rounded-lg hover-effect text-base md:text-lg consultation-button">Schedule a Consultation</a>
+    </div>
+  </section>
+
+  <!-- Our Founder Section -->
+  <section id="founder" class="section section-bg">
+    <div class="container mx-auto px-4">
+      <h2 class="section-title">Our Founder</h2>
+      <div class="max-w-5xl mx-auto text-center">
+        <div class="text-base md:text-lg">
+          <p class="mb-4">Mr. Gaurav Jain, with over 25+ years of distinguished experience, is the esteemed founder of Gaurav Jain & Associates and Managing Partner of Arihant Consultants. Since April 2000, he has provided unparalleled expertise in corporate accounting, regulatory compliance, and financial consultancy, enabling businesses to navigate complex legal and fiscal landscapes with confidence.</p>
+          <p class="mb-4">As a trusted advisor to prominent business conglomerates and corporate entities, Mr. Jain offers strategic guidance in financial structuring, taxation, regulatory compliance, and corporate governance. His leadership has transformed the firm into a comprehensive consultancy, supported by a proficient team of Chartered Accountants, Company Secretaries, legal experts, and senior financial professionals.</p>
+          <p>Mr. Jain’s unwavering commitment to corporate governance, tax optimization, risk mitigation, and strategic financial planning ensures the delivery of precise, transparent, and results-driven solutions that enhance operational efficiency and uphold regulatory standards.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Professional Services Section -->
+  <section id="services" class="section section-bg">
+    <div class="container mx-auto px-4">
+      <h2 class="section-title">Our Professional Services</h2>
+      <p class="text-base md:text-lg text-center max-w-4xl mx-auto mb-10">Gaurav Jain & Associates offers a comprehensive suite of financial and regulatory consultancy services, meticulously crafted to address the sophisticated needs of enterprises across diverse sectors. Our authoritative expertise in financial structuring, compliance, and strategic planning empowers organizations to achieve fiscal resilience and regulatory adherence. We deliver bespoke solutions that optimize tax obligations, streamline operations, and foster sustainable growth, underpinned by a commitment to precision, transparency, and excellence.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="p-5 bg-[#0a1a3b] rounded-lg hover-effect">
+          <h3 class="text-lg md:text-xl font-semibold mb-3">Accounting & Bookkeeping</h3>
+          <ul class="list-disc list-inside space-y-2 text-base">
+            <li>Accurate financial record-keeping and reporting</li>
+            <li>Payroll processing and reconciliation</li>
+            <li>Cash flow analysis and forecasting</li>
+            <li>Audit preparation and compliance assurance</li>
+          </ul>
+        </div>
+        <div class="p-5 bg-[#0a1a3b] rounded-lg hover-effect">
+          <h3 class="text-lg md:text-xl font-semibold mb-3">Compliance Management</h3>
+          <ul class="list-disc list-inside space-y-2 text-base">
+            <li>End-to-end statutory compliance with regulatory mandates</li>
+            <li>Precise GST, ROC, and tax filings</li>
+            <li>Corporate governance advisory and oversight</li>
+            <li>Risk assessment and mitigation strategies</li>
+          </ul>
+        </div>
+        <div class="p-5 bg-[#0a1a3b] rounded-lg hover-effect">
+          <h3 class="text-lg md:text-xl font-semibold mb-3">Business Registrations</h3>
+          <ul class="list-disc list-inside space-y-2 text-base">
+            <li>Private Limited Company (Pvt Ltd)</li>
+            <li>Limited Company (Ltd)</li>
+            <li>Nidhi Company</li>
+            <li>Section 8 Company (Non-Profit)</li>
+            <li>One Person Company (OPC)</li>
+            <li>Limited Liability Partnership (LLP)</li>
+            <li>Partnership Firm</li>
+            <li>Sole Proprietorship</li>
+            <li>Trust & Society Registration</li>
+            <li>Producer Company Registration</li>
+          </ul>
+        </div>
+        <div class="p-5 bg-[#0a1a3b] rounded-lg hover-effect">
+          <h3 class="text-lg md:text-xl font-semibold mb-3">GST Consultancy</h3>
+          <ul class="list-disc list-inside space-y-2 text-base">
+            <li>GST registration and compliance</li>
+            <li>Accurate return filings</li>
+            <li>Input tax credit reconciliation</li>
+            <li>Advisory on GST optimization</li>
+          </ul>
+        </div>
+        <div class="p-5 bg-[#0a1a3b] rounded-lg hover-effect">
+          <h3 class="text-lg md:text-xl font-semibold mb-3">TDS Consultancy</h3>
+          <ul class="list-disc list-inside space-y-2 text-base">
+            <li>Accurate TDS deduction and compliance</li>
+            <li>Timely return filings</li>
+            <li>TDS certificate issuance and reconciliation</li>
+            <li>Advisory on TDS provisions</li>
+          </ul>
+        </div>
+        <div class="p-5 bg-[#0a1a3b] rounded-lg hover-effect">
+          <h3 class="text-lg md:text-xl font-semibold mb-3">Income Tax Consultancy</h3>
+          <ul class="list-disc list-inside space-y-2 text-base">
+            <li>Income tax return preparation and e-filing</li>
+            <li>Tax audit advisory</li>
+            <li>Representation in scrutiny assessments and appeals</li>
+            <li>Advance tax computation and compliance</li>
+          </ul>
+        </div>
+      </div>
+      <p class="text-base md:text-lg text-center mt-10 max-w-4xl mx-auto">Partner with us for strategic financial solutions that drive operational excellence and ensure meticulous compliance with all regulatory mandates.</p>
+    </div>
+  </section>
+
+  <!-- Competitive Edge Section -->
+  <section id="advantages" class="section section-bg">
+    <div class="container mx-auto px-4">
+      <h2 class="section-title">Our Competitive Edge</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
+        <div class="p-5 bg-[#0a1a3b] rounded-lg hover-effect">
+          <h3 class="text-lg md:text-xl font-semibold mb-3">Expedited Service Delivery</h3>
+          <p class="text-base">Our streamlined processes ensure swift turnaround times for all financial and compliance services, enabling your enterprise to maintain agility.</p>
+        </div>
+        <div class="p-5 bg-[#0a1a3b] rounded-lg hover-effect">
+          <h3 class="text-lg md:text-xl font-semibold mb-3">Unparalleled Reliability</h3>
+          <p class="text-base">With a proven track record spanning over 25+ years, we deliver consistent, dependable solutions to ensure your long-term success.</p>
+        </div>
+        <div class="p-5 bg-[#0a1a3b] rounded-lg hover-effect">
+          <h3 class="text-lg md:text-xl font-semibold mb-3">Expert Team</h3>
+          <p class="text-base">Our accomplished team of Chartered Accountants, Company Secretaries, and legal professionals provides authoritative, tailored advisory services.</p>
+        </div>
+        <div class="p-5 bg-[#0a1a3b] rounded-lg hover-effect">
+          <h3 class="text-lg md:text-xl font-semibold mb-3">Transparent Operations</h3>
+          <p class="text-base">We prioritize clear communication and full transparency, ensuring you are consistently informed and confident in our services.</p>
+        </div>
+        <div class="p-5 bg-[#0a1a3b] rounded-lg hover-effect">
+          <h3 class="text-lg md:text-xl font-semibold mb-3">Bespoke Solutions</h3>
+          <p class="text-base">Recognizing the unique needs of each enterprise, we craft customized financial strategies aligned with your specific objectives and industry requirements.</p>
+        </div>
+        <div class="p-5 bg-[#0a1a3b] rounded-lg hover-effect">
+          <h3 class="text-lg md:text-xl font-semibold mb-3">Proactive Engagement</h3>
+          <p class="text-base">Our forward-thinking approach anticipates challenges and delivers proactive solutions to keep your enterprise ahead of the curve.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="section section-bg">
+    <div class="container mx-auto px-4">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="max-w-4xl mx-auto space-y-3">
+        <div class="faq-item p-5 bg-[#0a1a3b] rounded-lg">
+          <h3 class="text-base md:text-lg font-semibold mb-2">How does mismanagement of bookkeeping affect long-term financial stability?</h3>
+          <div class="faq-answer">
+            <p class="text-base">Inconsistent bookkeeping leads to inaccurate financial records, cash flow shortages, tax penalties, and difficulty securing future investments.</p>
+          </div>
+        </div>
+        <div class="faq-item p-5 bg-[#0a1a3b] rounded-lg">
+          <h3 class="text-base md:text-lg font-semibold mb-2">What are the consequences of payroll errors, and how can businesses mitigate them?</h3>
+          <div class="faq-answer">
+            <p class="text-base">Payroll errors may result in labor law violations, employee dissatisfaction, and tax miscalculations. Ensuring accurate tax deductions and timely payments is key to compliance.</p>
+          </div>
+        </div>
+        <div class="faq-item p-5 bg-[#0a1a3b] rounded-lg">
+          <h3 class="text-base md:text-lg font-semibold mb-2">How does cash flow mismanagement lead to insolvency?</h3>
+          <div class="faq-answer">
+            <p class="text-base">Poor cash flow forecasting results in payment delays, increased debt dependency, and inability to cover operational expenses, eventually leading to insolvency.</p>
+          </div>
+        </div>
+        <div class="faq-item p-5 bg-[#0a1a3b] rounded-lg">
+          <h3 class="text-base md:text-lg font-semibold mb-2">Why is audit preparation more than just compliance—what strategic advantage does it offer?</h3>
+          <div class="faq-answer">
+            <p class="text-base">Well-prepared audits enhance financial credibility, reduce risk exposure, attract investors, and ensure smoother tax assessments.</p>
+          </div>
+        </div>
+        <div class="faq-item p-5 bg-[#0a1a3b] rounded-lg">
+          <h3 class="text-base md:text-lg font-semibold mb-2">What differentiates a statutory audit from forensic audits, and when is each required?</h3>
+          <div class="faq-answer">
+            <p class="text-base">Statutory audits verify financial statements for regulatory compliance, while forensic audits investigate fraud, financial discrepancies, or legal disputes.</p>
+          </div>
+        </div>
+        <div class="faq-item p-5 bg-[#0a1a3b] rounded-lg">
+          <h3 class="text-base md:text-lg font-semibold mb-2">How do corporate governance failures lead to financial scandals?</h3>
+          <div class="faq-answer">
+            <p class="text-base">Weak governance fosters unethical decision-making, financial misreporting, and regulatory violations, leading to reputation loss and legal consequences.</p>
+          </div>
+        </div>
+        <div class="faq-item p-5 bg-[#0a1a3b] rounded-lg">
+          <h3 class="text-base md:text-lg font-semibold mb-2">What hidden risks do businesses face when choosing a legal structure?</h3>
+          <div class="faq-answer">
+            <p class="text-base">Different business structures impact liability exposure, taxation efficiency, and exit strategies. Poor choice can limit financial flexibility and tax benefits.</p>
+          </div>
+        </div>
+        <div class="faq-item p-5 bg-[#0a1a3b] rounded-lg">
+          <h3 class="text-base md:text-lg font-semibold mb-2">How can strategic depreciation planning impact tax liabilities and asset management?</h3>
+          <div class="faq-answer">
+            <p class="text-base">Optimal depreciation claims can reduce taxable income, enhance cash flow allocation, and extend asset lifespan for improved capital efficiency.</p>
+          </div>
+        </div>
+        <div class="faq-item p-5 bg-[#0a1a3b] rounded-lg">
+          <h3 class="text-base md:text-lg font-semibold mb-2">How does retained earnings influence investor confidence and financial stability?</h3>
+          <div class="faq-answer">
+            <p class="text-base">A strong retained earnings balance signals sustainable growth potential, making businesses attractive to investors and ensuring reinvestment flexibility.</p>
+          </div>
+        </div>
+        <div class="faq-item p-5 bg-[#0a1a3b] rounded-lg">
+          <h3 class="text-base md:text-lg font-semibold mb-2">What are the legal consequences of inaccurate financial reporting?</h3>
+          <div class="faq-answer">
+            <p class="text-base">Financial misstatements can result in compliance penalties, regulatory scrutiny, loss of investor trust, and in severe cases, criminal liability.</p>
+          </div>
+        </div>
+        <div class="faq-item p-5 bg-[#0a1a3b] rounded-lg">
+          <h3 class="text-base md:text-lg font-semibold mb-2">How do external audits differ from internal audits in assessing financial health?</h3>
+          <div class="faq-answer">
+            <p class="text-base">External audits validate financial accuracy for stakeholders, while internal audits focus on operational efficiency, risk control, and compliance improvements.</p>
+          </div>
+        </div>
+        <div class="faq-item p-5 bg-[#0a1a3b] rounded-lg">
+          <h3 class="text-base md:text-lg font-semibold mb-2">How does business registration impact taxation strategies and expansion plans?</h3>
+          <div class="faq-answer">
+            <p class="text-base">Each registration type affects tax obligations, funding options, liability protection, and international expansion strategies, making informed choices crucial.</p>
+          </div>
+        </div>
+        <div class="faq-item p-5 bg-[#0a1a3b] rounded-lg">
+          <h3 class="text-base md:text-lg font-semibold mb-2">Why is risk assessment an integral part of compliance strategy rather than a reactive measure?</h3>
+          <div class="faq-answer">
+            <p class="text-base">Proactive risk assessment prevents financial losses, ensures regulatory readiness, and strengthens operational resilience in unpredictable market conditions.</p>
+          </div>
+        </div>
+        <div class="faq-item p-5 bg-[#0a1a3b] rounded-lg">
+          <h3 class="text-base md:text-lg font-semibold mb-2">What financial red flags should businesses watch for during tax audits?</h3>
+          <div class="faq-answer">
+            <p class="text-base">Discrepancies in revenue recognition, excessive deductions, cash flow inconsistencies, and unreported transactions often trigger tax audits and investigations.</p>
+          </div>
+        </div>
+        <div class="faq-item p-5 bg-[#0a1a3b] rounded-lg">
+          <h3 class="text-base md:text-lg font-semibold mb-2">How do financial forecasting errors result in poor strategic decision-making?</h3>
+          <div class="faq-answer">
+            <p class="text-base"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Us Section -->
+  <section id="contact" class="section section-bg">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="section-title">Contact Us</h2>
+      <div class="max-w-3xl mx-auto text-lg md:text-xl bg-[#0a1a3b] p-6 rounded-lg shadow-lg">
+        <p class="mb-4"><strong>Contact Numbers:</strong> +91 9811439332, +91 8700627526</p>
+        <p class="mb-4"><strong>Email:</strong> <a href="mailto:office@gauravjainfinance.com" class="hover:text-[#3b82f6] no-underline">office@gauravjainfinance.com</a></p>
+        <p class="mb-4"><strong>Office Address:</strong> Flat-306, Tower-07, Valley View Estates, Faridabad Road, Gwal Pahari, Gurugram, Haryana-122003, India</p>
+        <p class="mb-6"><strong>GSTIN:</strong> 06ADMPJ4842L1Z7</p>
+        <div class="flex justify-center gap-4">
+          <a href="https://www.linkedin.com/in/gauravjainfinance" target="_blank" class="social-icon" aria-label="LinkedIn">
+            <svg class="w-6 h-6 md:w-8 md:h-8 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.5c-.97 0-1.75-.78-1.75-1.75s.78-1.75 1.75-1.75 1.75.78 1.75 1.75-.78 1.75-1.75 1.75zm13.5 12.5h-3v-5.5c0-1.32-.03-3.02-1.84-3.02-1.84 0-2.12 1.44-2.12 2.92v5.6h-3v-11h2.88v1.51h.04c.4-.76 1.39-1.56 2.86-1.56 3.06 0 3.62 2.02 3.62 4.65v6.4z"/></svg>
+          </a>
+          <a href="https://x.com/gaurav_arihant" target="_blank" class="social-icon" aria-label="X">
+            <svg class="w-6 h-6 md:w-8 md:h-8 fill-current" viewBox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19 9.46 12.503h-7.404l-5.804-7.588-6.64 7.588H.468l8.592-9.832-9.066-11.86h7.603l5.24 6.926 6.064-6.926zm-1.297 19.267h2.044L7.133 3.81H4.964l12.604 16.61z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Copyright Section -->
+  <section id="copyright" class="copyright-section">
+    <div class="container mx-auto px-4">
+      <p class="copyright-text">© 2025 Gaurav Jain & Associates. All rights reserved.</p>
+    </div>
+  </section>
+
+  <script>
+    // FAQ Accordion
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const answer = item.querySelector('.faq-answer');
+        const isOpen = answer.classList.contains('open');
+        
+        // Close all other FAQs
+        document.querySelectorAll('.faq-answer').forEach(otherAnswer => {
+          otherAnswer.classList.remove('open');
+        });
+        
+        // Toggle current FAQ
+        if (!isOpen) {
+          answer.classList.add('open');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+<!-- End of HTML Document -->
